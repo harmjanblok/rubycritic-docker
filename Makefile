@@ -11,7 +11,11 @@ VERSION := 3.1.3-0
 _default: build
 
 build:
-	docker build . -t harmjanblok/$(PROJECT):$(VERSION)
+	docker build \
+		--build-arg http_proxy=$(http_proxy) \
+		--build-arg https_proxy=$(https_proxy) \
+		--tag harmjanblok/$(PROJECT):$(VERSION) \
+		.
 
 test:
 	docker run \
