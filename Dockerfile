@@ -1,4 +1,4 @@
-FROM ruby:2.3.3
+FROM ruby:2.4
 
 ENV HOME /rubycritic
 WORKDIR ${HOME}
