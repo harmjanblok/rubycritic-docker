@@ -1,6 +1,6 @@
 #!/usr/bin/env make
 PROJECT := rubycritic
-VERSION := 3.1.3_0
+VERSION := 3.1.3
 
 # Declare all targets as phony targets
 # https://www.gnu.org/software/make/manual/make.html#Phony-Targets
@@ -12,11 +12,6 @@ _default: build
 
 build:
 	docker build . -t harmjanblok/$(PROJECT):$(VERSION)
-
-push:
-	docker tag harmjanblok/$(PROJECT):$(VERSION) harmjanblok/$(PROJECT):latest
-	docker push harmjanblok/$(PROJECT):$(VERSION)
-	docker push harmjanblok/$(PROJECT):latest
 
 test:
 	docker run \
