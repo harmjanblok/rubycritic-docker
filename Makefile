@@ -1,6 +1,6 @@
 #!/usr/bin/env make
 PROJECT := rubycritic
-VERSION := 3.1.3
+VERSION := 3.1.3-0
 
 # Declare all targets as phony targets
 # https://www.gnu.org/software/make/manual/make.html#Phony-Targets
